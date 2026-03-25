@@ -1,0 +1,43 @@
+{
+  "name": "@sj-distributor/odoo-channel",
+  "version": "1.1.0",
+  "packageManager": "pnpm@10.6.3",
+  "type": "module",
+  "description": "Odoo Discuss channel plugin for OpenClaw",
+  "license": "MIT",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "src",
+    "index.ts",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "channel": {
+      "id": "odoo",
+      "label": "Odoo Discuss",
+      "selectionLabel": "Odoo Discuss",
+      "docsPath": "/channels/odoo",
+      "docsLabel": "odoo",
+      "blurb": "Odoo Discuss messaging channel.",
+      "order": 90
+    }
+  },
+  "dependencies": {
+    "openclaw": "^2026.3.11"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

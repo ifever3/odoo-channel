@@ -1,0 +1,51 @@
+{
+  "id": "odoo-channel",
+  "name": "Odoo Discuss Channel",
+  "version": "1.1.0",
+  "description": "Odoo Discuss 渠道集成 - 支持群组和私聊，提供 odoo_api 工具和消息轮询",
+  "channels": ["odoo"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "url": {
+        "type": "string",
+        "title": "Odoo URL",
+        "description": "Odoo 实例地址，例如 https://odoo.example.com"
+      },
+      "db": {
+        "type": "string",
+        "title": "Database",
+        "description": "Odoo 数据库名"
+      },
+      "uid": {
+        "type": "number",
+        "title": "User ID",
+        "description": "用于 JSON-RPC 的 Odoo 用户 ID"
+      },
+      "password": {
+        "type": "string",
+        "title": "Password",
+        "description": "用于 JSON-RPC 的 Odoo 密码或 token"
+      },
+      "botPartnerId": {
+        "type": "number",
+        "title": "Bot Partner ID",
+        "description": "OpenClaw AI 在 Odoo 中的 partner ID"
+      },
+      "webhookSecret": {
+        "type": "string",
+        "title": "Webhook Secret",
+        "description": "与 Odoo 端保持一致的 webhook secret"
+      },
+      "apiKey": {
+        "type": "string",
+        "title": "API Key",
+        "description": "预留字段；当前 JSON-RPC 路径未使用"
+      }
+    }
+  },
+  "clawdbot": {
+    "extensions": ["./index.ts"]
+  }
+}
